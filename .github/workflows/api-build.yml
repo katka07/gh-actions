@@ -12,7 +12,7 @@ jobs:
         runs-on: self-hosted
         steps:
             - uses: actions/checkout@v4
-            - run: donet --list-runtimes
-            - run: donet --list-sdks
+            - run: dotnet --list-runtimes
+            - run: dotnet --list-sdks
             - run: dotnet build
               working-directory: ./api
