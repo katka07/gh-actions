@@ -3,7 +3,7 @@ name: api-pull-build
 on:
     pull_request: 
         branches:
-            self
+            main
 jobs:
     build:
         name: dotnet-api-build

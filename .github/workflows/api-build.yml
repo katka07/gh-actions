@@ -9,7 +9,7 @@ on:
 jobs:
     build:
         name: dotnet-api-build
-        runs-on: self-hosted
+        runs-on: [self-hosted, Linux]
         steps:
             - uses: actions/checkout@v4
             - run: dotnet --list-runtimes
