@@ -1,0 +1,16 @@
+name: api-pull-build
+
+on:
+    pull_request: 
+        branches:
+            self
+jobs:
+    build:
+        name: dotnet-api-build
+        runs-on: self-hosted
+        steps:
+            - uses: actions/checkout@v4
+            - run: dotnet --list-runtimes
+            - run: dotnet --list-sdks
+            - run: dotnet build
+              working-directory: ./api
